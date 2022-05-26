@@ -1,0 +1,29 @@
+{{>navbar}}
+
+<h1>This is home page</h1>
+
+{{#if name}}
+<h2>Welcome back {{name}}</h2>
+{{else}}
+<h2>Welcome back user</h2>
+{{/if}}
+
+{{#unless license}}
+<p>No license found</p>
+{{/unless}}
+
+<h2>Course</h2>
+{{#with course}}
+<p>Course Name: {{name}}</p>
+<p>Time Period: {{timePeriod}}</p>
+{{/with}}
+
+<h1>List of best students at Xccelerate</h1>
+<ul>
+    {{#each students}}
+    <li>{{this.name}}</li>
+    {{/each}}
+</ul>
+
+
+<p>Date: {{date}}</p>
